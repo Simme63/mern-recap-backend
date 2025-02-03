@@ -17,8 +17,17 @@ const db = mongoose.connection;
 db.on("error", (error) => console.log(error));
 db.once("open", () => console.log("Connected to database - Congrats!"));
 
+// cors opitions
+
 // * CORS
-app.use(cors());
+app.use(
+	cors({
+		origin: "https://mern-recap-frontend.vercel.app",
+		methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+		allowedHeaders: ["Content-Type", "Authorization"],
+		credentials: true,
+	})
+);
 
 // * body parser
 app.use(express.json());
