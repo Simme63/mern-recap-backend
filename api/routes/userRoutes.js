@@ -14,6 +14,7 @@ router.delete(
 	userController.deleteUser
 );
 
+//Email and password to login
 //Ludvig.Schlajmon@ga.ntig.se
 //Goated420!
 
